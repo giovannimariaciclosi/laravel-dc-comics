@@ -8,7 +8,9 @@
       
       @foreach ($comics as $singleComic)
         <div class="card">
-          <img class="thumb" src="{{$singleComic['thumb']}}" alt="{{$singleComic['series']}}">
+          <div class="thumb-container">
+            <img class="thumb" src="{{$singleComic['thumb']}}" alt="{{$singleComic['series']}}">
+          </div>
           <div class="series">{{$singleComic['series']}}</div>
         </div>
         @endforeach

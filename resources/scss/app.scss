@@ -98,10 +98,15 @@
             border: none;
             cursor: pointer;
 
-            .thumb {
-                width: 100%;
-            }
+            .thumb-container {
+                width: 180px;
+                height: 180px;
+                overflow: hidden;
 
+                .thumb {
+                    width: 100%;
+                }
+            }
             .series {
                 padding-top: 0.8em;
                 text-transform: uppercase;
