@@ -6,7 +6,7 @@
           <div class="list-title">DC COMICS</div>
           <ul class="list">
               <li>Characters</li>
-              <li>Comics</li>
+              <li><a href="{{route('home')}}">Comics</a></li>
               <li>Movies</li>
               <li>TV</li>
               <li>Games</li>
