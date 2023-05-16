@@ -6,13 +6,20 @@
     </div>
   </div>
   <div class="container d-flex justify-content-between align-items-center">
-    <div class="img-container">
+    <a href="{{route('home')}}" class="img-container">
       <img src="{{ Vite::asset('resources/img/dc-logo.png') }}"  alt="DC Logo" />
-    </div>
+    </a>
     <ul class="d-flex align-items-center">
-      @foreach ($linksList as $link)
-      <li>{{$link}}</li>
-      @endforeach
+      <li>CHARACTERS</li>
+      <li><a href="{{route('home')}}">COMICS</a></li>
+      <li>MOVIES</li>
+      <li>TV</li>
+      <li>GAMES</li>
+      <li>COLLECTIBLES</li>
+      <li>VIDEOS</li>
+      <li>FANS</li>
+      <li>NEWS</li>
+      <li>SHOP</li>
     </ul>
   </div>
   <div class="jumbotron"></div>

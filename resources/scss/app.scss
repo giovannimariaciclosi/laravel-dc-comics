@@ -154,6 +154,76 @@
     }
 }
 
+#singlecomic-section {
+    position: relative;
+
+    .current-image {
+        background-color: #0282f9;
+        width: 100%;
+        height: 100px;
+    }
+
+    .container {
+        .thumb {
+            position: absolute;
+            height: 250px;
+            top: -170px;
+        }
+
+        h1 {
+            color: #003f5f;
+            padding-top: 1em;
+        }
+
+        .price {
+            background-color: #55ba59;
+            padding: 1em;
+            color: white;
+            border: 1px solid #357839;
+            margin-bottom: 1em;
+
+            .opacity {
+                opacity: 0.5;
+            }
+        }
+
+        .description {
+            color: #636467;
+            font-weight: 600;
+            padding-bottom: 3em;
+        }
+    }
+
+    hr {
+        margin-bottom: 0;
+    }
+
+    .grey-section {
+        background-color: #f6f6f6;
+
+        h3 {
+            color: #003f5f;
+            padding-top: 1em;
+        }
+
+        .specs-container {
+            padding-bottom: 4em;
+
+            .specs-inner {
+                display: flex;
+                gap: 100px;
+                padding: 1em 0;
+                border-top: 1px solid #e4e4e4;
+                border-bottom: 1px solid #e4e4e4;
+
+                .spec-title {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
 footer {
     #main-container {
         color: white;
