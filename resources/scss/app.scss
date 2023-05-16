@@ -1,0 +1,253 @@
+@import "~bootstrap/scss/bootstrap";
+
+@mixin button($color) {
+    background-color: $color;
+    padding: 0.5em 1.5em;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+#header {
+    .top-banner {
+        background-color: #0282f9;
+        color: white;
+        font-weight: bold;
+        font-size: 0.7em;
+        margin-bottom: 1em;
+        .container {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            padding: 0.3em 0;
+        }
+    }
+    .img-container {
+        padding-bottom: 1em;
+    }
+    ul {
+        gap: 20px;
+        font-weight: bold;
+        list-style-type: none;
+        flex-wrap: wrap;
+
+        li {
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+                color: #0282f9;
+            }
+
+            &:hover::after {
+                content: "";
+                height: 6px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 74px;
+                width: 100%;
+                background: #0282f9;
+            }
+
+            &:active::after {
+                content: "";
+                height: 6px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 74px;
+                width: 100%;
+                background: #0282f9;
+            }
+        }
+    }
+    .jumbotron {
+        background-image: url("../img/jumbotron.jpg");
+        height: 300px;
+        background-size: cover;
+    }
+}
+
+#card-section {
+    background-color: #1c1c1c;
+    .container {
+        padding: 2em 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 20px;
+        position: relative;
+
+        .current-btn {
+            @include button(#0282f9);
+            font-size: 1.2em;
+            position: absolute;
+            z-index: 2;
+            top: -22px;
+            left: 0;
+        }
+
+        .card {
+            max-width: 180px;
+            background-color: #1c1c1c;
+            padding-top: 2em;
+            border: none;
+            cursor: pointer;
+
+            .thumb {
+                width: 100%;
+            }
+
+            .series {
+                padding-top: 0.8em;
+                text-transform: uppercase;
+                font-size: 0.8em;
+                color: white;
+            }
+        }
+    }
+    .btn-container {
+        padding-top: 0;
+        .load-more-btn {
+            @include button(#0282f9);
+            padding: 0.8em 5em;
+            font-size: 0.8em;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+#icon-section {
+    background-color: #0282f9;
+    color: white;
+    .container {
+        padding: 2.5em 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .card-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 190px;
+        cursor: pointer;
+
+        img {
+            max-width: 50px;
+            max-height: 50px;
+        }
+    }
+}
+
+footer {
+    #main-container {
+        color: white;
+        background-image: url("../img/footer-bg.jpg");
+        min-height: 370px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .linklist {
+            background-image: url("../img/dc-logo-bg.png");
+            background-repeat: no-repeat;
+            background-position: right;
+
+            display: flex;
+            gap: 50px;
+
+            min-height: 370px;
+            padding: 2em 0;
+
+            .list-container {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                .list-title {
+                    font-size: 1.2em;
+                    font-weight: bold;
+                    padding-bottom: 0.6em;
+                }
+
+                .list {
+                    color: #959595;
+                    padding-bottom: 0.6em;
+                    font-size: 0.8em;
+                    list-style-type: none;
+                    padding-left: 0;
+
+                    li {
+                        cursor: pointer;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        .copyright {
+            color: #959595;
+            font-size: 0.8em;
+
+            span {
+                color: #0282f9;
+            }
+        }
+    }
+
+    #last-section-container {
+        background-color: #303030;
+        color: white;
+
+        .container {
+            padding: 2em 0;
+            display: flex;
+            gap: 40px;
+            justify-content: space-between;
+
+            button {
+                padding: 8px 15px;
+                background-color: transparent;
+                border: 2px solid #0282f9;
+                font-weight: bold;
+                color: white;
+
+                &:hover {
+                    background-color: #0282f9;
+                }
+            }
+
+            .social {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                .social-text {
+                    color: #0282f9;
+                    font-weight: bold;
+                }
+
+                .social-icon-container {
+                    display: flex;
+                    gap: 15px;
+                    cursor: pointer;
+
+                    img {
+                        max-width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
