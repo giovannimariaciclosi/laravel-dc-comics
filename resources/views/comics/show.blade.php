@@ -43,8 +43,40 @@
       <hr>
     </div>
   </div>
-  <div class="container mt-5 mb-5">
-    <a href="{{route('home')}}">Go Back</a>
+  <div class="container mt-5 mb-5 d-flex justify-content-around">
+    <a href="{{route('home')}}"><button class="btn btn-primary">Go Back</button></a>
+    {{-- EDIT --}}
+    <a href="{{route('comics.edit', $comic->id)}}"><button class="btn btn-success">Edit Comic</button></a>
+    {{-- DELETE --}}
+    {{-- Button trigger modal --}}
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      DELETE
+    </button>
+  
+    {{-- Modal --}}
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Are you sure? <br>
+            This is an irreversible action, you can never go back.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+              @csrf
+              @method('DELETE')
+              <button class="btn btn-danger">Delete</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{-- /Modal --}}
   </div>
 </main>
 
