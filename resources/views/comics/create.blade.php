@@ -41,7 +41,7 @@
         <label for="type">Type</label>
         <input type="text" id="type" name="type">
       </div>
-  
+      
       <button class="btn btn-primary" type="submit">Add New Comic</button>
     </form>
   </div>
